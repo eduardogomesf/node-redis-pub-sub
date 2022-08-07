@@ -3,7 +3,11 @@
 Example of how to use Pub/Sub with NodeJS and Redis
 
 ## Setup
+<<<<<<<<< Temporary merge branch 1
+Navigate to both publisher and subscriber folders to download the dependency for each node js application
+=========
 Navigate to both publisher and subscriber folders to install the dependency for each node js application
+>>>>>>>>> Temporary merge branch 2
 
 Publisher folder:
 ```
