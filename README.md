@@ -34,4 +34,5 @@ Body: {
 	"age": 21
 } <br />
 
-After creating a new user, the publisher app will publish the message to redis, which will send the message to the subscriber. When the subscriber receives the message, it will only log a message informing that the message was received and that it is going to send an email to the user (no email is actually sent). 
+After creating a new user, the publisher app will publish the message to redis, which will send the message to the subscriber. 
+When the subscriber receives the message, it will only log a message informing that the message was received and that it is going to send an email to the user (no email is actually sent). 
