@@ -7,7 +7,7 @@ app.use(express.json())
 
 const broker = new MessageBroker()
 
-await broker.subscribe('default', (message) => {
+await broker.subscribe('user-created', (message) => {
     console.log('Message received.')
     const user = JSON.parse(message)
     console.log(`Sending e-mail to ${user.name}(${user.email})`)

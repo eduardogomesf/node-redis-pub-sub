@@ -10,10 +10,10 @@ const users = []
 router.post('/users', async (request, response) => {
     const { name, email, age } = request.body
     
-    await broker.publish('default', { name, email })
-
     users.push({ name, email, age })
-
+    
+    await broker.publish('user-created', { name, email })
+    
     return response.status(201).json('User created')
 })
 
