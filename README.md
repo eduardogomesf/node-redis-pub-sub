@@ -3,7 +3,7 @@
 Example of how to use Pub/Sub with NodeJS and Redis
 
 ## Setup
-Navigate to both publisher and subscriber folders to install the dependency for each node js application
+Navigate to both publisher and subscriber folders to install the dependencies for each application
 
 Publisher folder:
 ```
