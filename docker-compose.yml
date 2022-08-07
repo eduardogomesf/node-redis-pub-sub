@@ -1,0 +1,16 @@
+version: '3'
+services:
+  redis:
+    container_name: redis-container
+    image: redis
+    ports: 
+      - "6379:6379"
+  publisher:
+    container_name: api-container
+    build: ./publisher
+    restart: always
+    image: node-api
+    ports:
+      - "8080:8080"
+    links:
+      - redis
