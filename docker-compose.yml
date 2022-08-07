@@ -9,8 +9,17 @@ services:
     container_name: api-container
     build: ./publisher
     restart: always
-    image: node-api
+    image: node-publisher
     ports:
       - "8080:8080"
+    links:
+      - redis
+  subscriber:
+    container_name: api-container-2
+    build: ./subscriber
+    restart: always
+    image: node-subscriber
+    ports:
+      - "8081:8081"
     links:
       - redis
