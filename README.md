@@ -2,21 +2,6 @@
 
 Example of how to use Pub/Sub with NodeJS and Redis
 
-## Setup
-Navigate to both publisher and subscriber folders to install the dependencies for each application
-
-Publisher folder:
-```
-    cd publisher
-    npm install
-```
-
-Subscriber folder: 
-```
-    cd subscriber
-    npm install
-```
-
 ## Running
 All you have to do is running docker-compose (make sure you are in the project's root directory)
 ```
