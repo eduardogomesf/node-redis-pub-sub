@@ -1,7 +1,10 @@
-import { createClient } from 'redis'
+// @ts-ignore
+import { createClient, RedisClientType } from 'redis'
 
 export class MessageBroker {
-    constructor() {
+    private connection: RedisClientType
+
+    constructor () {
         this.connection = createClient({
             socket: {
                 port: 6379,
@@ -12,7 +15,7 @@ export class MessageBroker {
         this.connection.connect()
     }
 
-    async subscribe(channel, callback) {
+    async subscribe (channel: string, callback: any) {
         return await this.connection.subscribe(channel, callback)
     }
 }

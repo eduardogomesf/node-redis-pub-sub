@@ -3,10 +3,10 @@ services:
   redis:
     container_name: redis-container
     image: redis
-    ports: 
+    ports:
       - "6379:6379"
   publisher:
-    container_name: api-container
+    container_name: publisher-container
     build: ./publisher
     restart: always
     image: node-publisher
@@ -15,7 +15,7 @@ services:
     links:
       - redis
   subscriber:
-    container_name: api-container-2
+    container_name: subscriber-container
     build: ./subscriber
     restart: always
     image: node-subscriber
